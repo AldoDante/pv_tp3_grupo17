@@ -10,7 +10,7 @@ const TaskList = ({ tasks, onToggle, onDelete }) => {
           key={task.id}
           task={task}
           onToggle={onToggle}
-          onDelete={onDelete}
+          onDelete={onDelete} //funciones que vienen de app.js
         />
       ))}
     </ul>
