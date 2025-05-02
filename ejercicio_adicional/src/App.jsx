@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../../vite-project/src/App.css';
 
 function App() {
   // Estado para los productos
@@ -23,7 +24,7 @@ function App() {
         ...productos,
         { descripcion, precio: parseFloat(precio) },
       ];
-      // Ordenar los productos por precio
+      // 4. Ordenar los productos por precio
       const productosOrdenados = nuevosProductos.sort((a, b) => a.precio - b.precio);
       setProductos(productosOrdenados);
       setDescripcion('');
