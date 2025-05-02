@@ -33,7 +33,7 @@ body {
     margin-bottom: 1.5rem;
   }
   
-  
+  /* Modifica el campo de entrada de texto cuando se hace clic en él */
   input[type="text"] {
     flex: 1;
     padding: 0.75rem;
@@ -48,6 +48,7 @@ body {
     outline: none;
   }
   
+  /* Modifica el botón de agregar tarea, cambiando a un fondo azul al pasar el mouse */
   button {
     padding: 0.75rem 1.2rem;
     background-color: #007bff;
@@ -63,6 +64,7 @@ body {
     background-color: #0056b3;
   }
   
+  /* Modifica la lista de tareas, eliminando los puntos de la lista y organizando los elementos */
   ul {
     list-style: none;
     padding: 0;
@@ -80,6 +82,7 @@ body {
     border: 1px solid #e0e0e0;
   }
   
+  /* Modifica el texto de la tarea, cambiando el color al pasar el mouse */
   li span {
     flex: 1;
     cursor: pointer;
@@ -90,6 +93,7 @@ body {
     color: #007bff;
   }
   
+  /* Modifica el botón de eliminar tarea, cambiando a un fondo rojo mas oscuro al pasar el mouse */
   li button {
     background-color: #dc3545;
   }
@@ -97,13 +101,15 @@ body {
   li button:hover {
     background-color: #c82333;
   }
-  
+
+  /* Ajusta el diseño en pantallas pequeñas (max de 480px), hace que los botones ocupen todo el ancho disponible */
   @media (max-width: 480px) {
     .container {
       margin: 1rem;
       padding: 1rem;
     }
   
+  /* Cambia el formulario a una disposición vertical y los botones ocupan todo el ancho disponible */
     form {
       flex-direction: column;
     }
