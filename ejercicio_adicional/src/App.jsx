@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../vite-project/src/App.css';
 
 function App() {
@@ -16,6 +16,23 @@ function App() {
   // Estado para manejar los valores del formulario
   const [descripcion, setDescripcion] = useState('');
   const [precio, setPrecio] = useState('');
+
+  // 1. Mostrar en consola cada producto
+  useEffect(() => {
+    console.log("1. Lista de productos:");
+    productos.forEach(producto => {
+      console.log(`Producto: ${producto.descripcion} - Precio: $${producto.precio}`);
+    });
+  }, [productos]);
+
+  // 2. Crear un nuevo array con productos cuyo precio sea mayor a $20,000
+  const productosCaros = productos.filter(producto => producto.precio > 20000);
+
+  // 3. Crear un array con los productos con el precio con IVA incluido (21%)
+  const productosConIVA = productos.map(producto => ({
+    ...producto,
+    precio: producto.precio * 1.21,
+  }));
 
   // 5. Agregar un nuevo producto y ordena automáticamente
   const agregarProducto = () => {
